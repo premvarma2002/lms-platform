@@ -4,6 +4,8 @@ import { auth } from "@clerk/nextjs";
 import { LayoutDashboard } from "lucide-react";
 import { redirect } from "next/navigation";
 import { TitleForm } from "./_components/title-form";
+import { DescriptionForm } from "./_components/description-form";
+import { ImageForm } from "./_components/image-form";
 
 const CourseIdPage = async ({
     params
@@ -15,6 +17,7 @@ const CourseIdPage = async ({
   if (!userId) {
     return redirect("/");
   }
+
 
   const course = await db.course.findUnique({
     where: {
@@ -36,7 +39,8 @@ const CourseIdPage = async ({
  
   const totalFields = requiredFields.length;
   const completedFields = requiredFields.filter(Boolean).length;
-
+  // const initialData = { ...course, description: course.description || '' };
+  // const description = course.description || "(No description provided)";
   const completionText = `(${completedFields}/${totalFields})`
 
     return ( 
@@ -60,6 +64,14 @@ const CourseIdPage = async ({
                   </h2>
                 </div>
                 <TitleForm
+                initialData={course}
+                courseId={course.id}
+                />
+                <DescriptionForm
+                initialData={course}
+                courseId={course.id}
+                />
+                <ImageForm
                 initialData={course}
                 courseId={course.id}
                 />
