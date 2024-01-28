@@ -1,6 +1,7 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
-
+// Here am using postgeSQL from neonDB 
+ 
 datasource db {
   provider  = "postgresql"
   url  	    = env("DATABASE_URL")
