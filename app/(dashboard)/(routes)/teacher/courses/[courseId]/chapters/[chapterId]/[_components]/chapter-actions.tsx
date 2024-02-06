@@ -37,7 +37,7 @@ export const ChapterActions = ({
         toast.success("Chapter published");
       }
 
-      router.refresh();
+      router.refresh(); // this refreshes the server component after we publish the chapter
     } catch {
       toast.error("Something went wrong");
     } finally {
