@@ -2,6 +2,8 @@
 
 ![image](https://github.com/premvarma2002/lms-platform/assets/98645019/69209684-07ce-4f64-9812-3b663ccaa27d)
 ![image](https://github.com/premvarma2002/lms-platform/assets/98645019/20caa5ef-7057-487b-b3c7-e54e039bd257)
+![image](https://github.com/premvarma2002/lms-platform/assets/98645019/286e302f-f049-4ab3-b4ea-c81b9a19b069)
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
